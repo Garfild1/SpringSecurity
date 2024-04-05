@@ -1,5 +1,4 @@
 package ru.kata.spring.boot_security.demo.Service;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -27,7 +26,7 @@ public class UserServiceImp implements UserService{
         return userRepository.findAll();
     }
     @Override
-    public User getUserById (Long id) {
+    public User getUserById(Long id) {
         return userRepository.findById(id).orElseThrow();
     }
     public User findUserByUsername(String username) {
